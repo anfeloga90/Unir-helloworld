@@ -25,3 +25,17 @@ pip install pytest***
 ***java -jar wiremock-jre8-standalone-2.33.1.jar --port 9090 --root-dir test/wiremock/ --verbose***
 
 ## Ejecutar pruebas
+
+pytest test/rest
+
+========================== test session starts ===========================
+platform darwin -- Python 3.9.12, pytest-7.1.2, pluggy-1.0.0
+rootdir: /Users/andresfelipelopezgallego/Documents/Documentos - MacBook Pro/Git/python/UNIR/JENKIS/Unir-helloworld, configfile: pytest.ini
+plugins: anyio-3.4.0
+collected 2 items
+
+test/rest/api_test.py ..                                                                                                                  [100%]
+
+=========================== 2 passed in 0.06s ===============================
+
+pytest test/unit
