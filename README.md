@@ -11,6 +11,8 @@ Instalar dependencias
 ***pip install app
 pip install pytest***
 
+***pip install flask***
+
 ***export FLASK_APP=app/api.py***
 
 ***flask run***
