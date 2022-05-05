@@ -24,8 +24,9 @@ pipeline {
             parallel {
                 stage('Unit') {
                     steps {
-                        sh '''
-                            /usr/local/bin/pytest --junitxml=result-unit.xml test/unit
+                        bat '''
+                            set PYTHONPATH=%WORKSPACE%
+                            pytest --junitxml=result-unit.xml test\\unit
                         '''
                     }
                 }

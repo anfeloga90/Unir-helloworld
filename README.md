@@ -8,6 +8,8 @@ Este proyecto sirve también como fuente de código para el pipeline de Jenkins.
 
 Instalar dependencias
 
+***apt install python3-flask***
+
 ***pip install app
 pip install pytest***
 
