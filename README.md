@@ -8,14 +8,19 @@ Este proyecto sirve también como fuente de código para el pipeline de Jenkins.
 
 Instalar dependencias
 
-***apt install python3-flask***
+***`apt install python3-flask`***
 
-***pip install app
-pip install pytest***
+**`apt install openjdk-11-jre-headless`**
 
-***pip install flask***
+**`apt install python3-pip`**
 
-***export FLASK_APP=app/api.py***
+**`pip install pytest`**
+
+***`pip install flask`***
+
+***`export FLASK_APP=app/api.py`***
+
+**`export PYTHONPATH=$(pwd)`**
 
 ***flask run***
 
