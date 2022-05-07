@@ -35,9 +35,20 @@ Instalar dependencias
 
 ## Ejecutar pruebas
 
-pytest test/rest
+pytest test
+================= test session starts =================
+platform darwin -- Python 3.9.12, pytest-7.1.2, pluggy-1.0.0
+rootdir: /Users/andresfelipelopezgallego/Documents/Documentos - MacBook Pro/Git/python/UNIR/JENKIS/Unir-helloworld, configfile: pytest.ini
+plugins: anyio-3.4.0
+collected 13 items
 
-========================== test session starts ===========================
+test/rest/api_test.py ..                                                                                                                          [ 15%]
+test/unit/calc_test.py .........                                                                                                                  [ 84%]
+test/unit/util_test.py ..                                                                                                                         [100%]
+
+=================13 passed in 0.19s ==============
+
+============== test session starts ==================
 platform darwin -- Python 3.9.12, pytest-7.1.2, pluggy-1.0.0
 rootdir: /Users/andresfelipelopezgallego/Documents/Documentos - MacBook Pro/Git/python/UNIR/JENKIS/Unir-helloworld, configfile: pytest.ini
 plugins: anyio-3.4.0
