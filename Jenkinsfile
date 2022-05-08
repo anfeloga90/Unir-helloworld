@@ -33,7 +33,7 @@ pipeline {
                 stage('Service') {
                     steps {
                         sh '''
-                            export FLASK_APP=app/api.py`
+                            export FLASK_APP=app/api.py
                             export FLASK_ENV=development
                             start flask run & 
                             start java -jar wiremock-jre8-standalone-2.33.1.jar --port 9090 --root-dir test/wiremock
