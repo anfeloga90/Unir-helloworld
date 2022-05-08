@@ -25,7 +25,7 @@ pipeline {
                 stage('Unit') {
                     steps {
                         sh '''
-                            set PYTHONPATH=%WORKSPACE%
+                            export PYTHONPATH=$(pwd)
                             pytest --junitxml=result-unit.xml test/unit
                         '''
                     }
