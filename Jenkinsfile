@@ -38,6 +38,7 @@ pipeline {
                             /usr/local/bin/flask run & 
                             java -jar wiremock-jre8-standalone-2.33.1.jar --port 9090 --root-dir test/wiremock &
                             export PYTHONPATH=%WORKSPACE%
+                            sleep 10
                             /usr/local/bin/pytest --junitxml=result-rest.xml test/rest
                         '''
                     }    
