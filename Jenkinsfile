@@ -6,10 +6,10 @@ pipeline {
             steps {
                 // Obtener código del repo
                 //git 'https://github.com/anieto-unir/helloworld.git'
-		script {
-			scmVars = checkout scm
-			echo 'scm : the commit id is ' + scmVars.GIT_COMMIT
-		}
+                script {
+                    scmVars = checkout scm // Obtener código del repo
+                    echo 'scm : the commit id is ' + scmVars.GIT_COMMIT
+                }
             }
         }
         
@@ -24,9 +24,9 @@ pipeline {
             parallel {
                 stage('Unit') {
                     steps {
-                        bat '''
+                        sh '''
                             set PYTHONPATH=%WORKSPACE%
-                            pytest --junitxml=result-unit.xml test\\unit
+                            pytest --junitxml=result-unit.xml test/unit
                         '''
                     }
                 }
