@@ -35,10 +35,10 @@ pipeline {
                         sh '''
                             export FLASK_APP=app/api.py
                             export FLASK_ENV=development
-                            start flask run & 
-                            start java -jar wiremock-jre8-standalone-2.33.1.jar --port 9090 --root-dir test/wiremock
+                            flask run & 
+                            java -jar wiremock-jre8-standalone-2.33.1.jar --port 9090 --root-dir test/wiremock &
                             export PYTHONPATH=%WORKSPACE%
-                            pytest --junitxml=result-rest.xml test\\rest
+                            /usr/local/bin/pytest --junitxml=result-rest.xml test/rest
                         '''
                     }    
                 }
